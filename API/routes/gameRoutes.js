@@ -1,7 +1,7 @@
-import express from 'express';
+import express from "express";
 
 const gameRoutes = express.Router();
-import gameController from '../controllers/gameController.js';
+import gameController from "../controllers/gameController.js";
 
 // Rotas - Endpoints
 
@@ -16,5 +16,8 @@ gameRoutes.delete("/game/:id", gameController.deleteGame);
 
 // Endpoint para atualizar as informações de um jogo específico
 gameRoutes.put("/game/:id", gameController.UpdateGame);
+
+// Endpoint para listar um único jogo
+gameRoutes.get("/game/:id", gameController.getOneGame);
 
 export default gameRoutes;
